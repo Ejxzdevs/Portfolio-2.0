@@ -249,16 +249,19 @@ nav > ul > li > a {
         display: grid;
         grid-template-areas: "hero" "describe";
         grid-template-columns: repeat(1, 1fr);
-        padding: 25px 0;     
+        padding: 0 0 10px 0;     
     }
 
     .heroContainer > .hero {
         grid-area: hero;
         width: 320px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .heroContainer > .hero > img {
-        height: 350px;
-        margin-bottom: 50px;
+        height: 250px;
+        margin-bottom: 30px;
     }
 
     .heroContainer > .describe {
@@ -306,7 +309,7 @@ nav > ul > li > a {
     }
 
     .aboutContainer > .aboutImage {
-        border: solid 1px black;
+      
         height:200px;
     }
 
@@ -314,5 +317,44 @@ nav > ul > li > a {
     .aboutContainer > .aboutImage > img {
         height: 150px;
     }
+
+    .aboutContainer > .aboutMe {
+      
+        display: flex;
+        gap: 5px;
+        align-items: center; 
+        padding: 0 15px;
+
+    }
+
+    
+    .aboutContainer > .aboutMe > h1 {
+        margin: 10px 0;
+        font-size: 15px;
+    }
+
+    .aboutContainer > .aboutMe > p  {
+        font-size: 10px;
+    }
+
+    .aboutContainer > .aboutMe > .certifications {
+        height: auto;
+    }
+    .aboutContainer > .aboutMe > .certifications > ul {
+        padding: 10px 0;
+      
+    }
+
+    .aboutContainer > .aboutMe > .certifications > ul > li > h2 {
+        font-size: 15px;
+        text-align: center;
+        margin-top: 8px;
+        font-weight: bolder;
+        
+    }
+    .aboutContainer > .aboutMe > .certifications > ul > li > p {
+        font-size: 10px;
+    }
+    
 
     }
