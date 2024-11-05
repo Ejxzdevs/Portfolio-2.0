@@ -493,10 +493,10 @@ nav > ul > li > a {
     }
 
     .aboutContainer{
-        height: auto;
+        height: 500px;
         grid-template-areas: "aboutImage" "aboutMe";
         grid-template-columns: repeat(1, 1fr);
-        padding: 0;
+        padding: 70px 0;
     }
 
     .aboutContainer > .aboutImage {
@@ -556,21 +556,19 @@ nav > ul > li > a {
 
     /* services sections */
     .servicesContainer{
-        height: auto;
+        height: 800px;
         display: flex;
         flex-direction: column; 
-        padding: 30px 0;
+        padding: 0;
        
     }
-    
-    .servicesContainer {
-        margin-bottom: 5px;
-    
 
-    }
+    
     
     .servicesContainer h1{
         font-size: 20px;
+        margin-top: 50px;
+
         
 
     }
@@ -616,17 +614,18 @@ nav > ul > li > a {
     /* contact */
 
     .contactContainer{
-        height: auto;
+        height: 550px;
         width: 320px;
         display: flex;
         flex-direction: column;
-        gap: 15px;
-        padding: 50px 12px;
+        gap: 10px;
+        padding: 0;
    
     }
 
     .contactContainer h1 {
         font-size: 20px;
+        margin: 30px 0 0 0;
     }
 
     .contactContainer p {
@@ -641,7 +640,7 @@ nav > ul > li > a {
      
     }
 
-    .contactList > div {
+    .contactList > a {
         width: 170px;
         display: flex;
         flex-direction: row;
@@ -649,19 +648,19 @@ nav > ul > li > a {
         gap: 10px;
     }
 
-    .contactList > div > img {
+    .contactList > a > img {
         height: 30px;
         
     }
 
     
-    .contactList > div > p {
+    .contactList > a > p {
         font-size: 14px;
         font-weight: normal;
         width : 80px;
     }
 
-    .contactList > div:hover {
+    .contactList > a:hover {
         transform: translateY(-5px);
     }
 
