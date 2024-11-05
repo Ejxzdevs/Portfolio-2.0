@@ -7,105 +7,87 @@
     <link rel="stylesheet" href="style.css">
     <title>My Portfolio</title>
     <style>
-        .aboutContainer{
-            height: 100vh;
-            width: 100vw;
-            display: grid;
-            grid-template-areas: "aboutImage aboutMe";
-            grid-template-columns: repeat(2, 1fr);
-            padding: var(--container-padding);  
-            background-color: var(--background-light-color);
+    .servicesContainer{
+        height: 100vh;
+        width: 100vw;
+        padding: var(--container-padding);  
+        background-color: var(--background-dark-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        /* border: solid 2px white; */
+       
+   
+    }
+
+    .servicesContainer h1 {
+        color: var(--text-primary-light-color);
+        font-family: var(--text-primary-Textfont);
+        margin-bottom: 25px ;
+    }
+
+    .service-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        /* border: solid 2px white; */
+        width: inherit;
       
 
-          
-        }
+    }
 
-        .aboutContainer > .aboutImage {
-            grid-area: aboutImage;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-   
-       
-      
-        
-            
 
-        }
 
-        .aboutContainer > .aboutImage > img {
-            height: 350px;
-            border: solid 1px black;
-            padding: 12px;
-            border-radius: 50%;
-         
+    .service-box {
+        background-color: var(--background-light-color);
+        padding: 20px;
+        width: 300px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(24, 235, 242, .7);
+        transition: transform 0.3s ease;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
 
-        }
-        
+    .service-box img{
+        height: 120px;
+        width: 150px;
+    }
+    .service-box .img-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: solid 1px black; */
+        padding: 12px;
+    }
 
-        .aboutContainer > .aboutMe{
-            grid-area: aboutMe;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 12px;
-            padding-top: 30px;
-        
-        
-        }
+    .service-box h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+        color: var(--text-primary-dark-color);
+        font-family: var(--text-primary-Textfont);
+    }
 
-        .aboutContainer > .aboutMe > h1 {
-            margin-top: 120px;
-            font-family: var(--text-primary-Textfont);
-            color: var(--background-dark-color);
-            font-weight: bolder;
-       
-        }
 
-        .aboutContainer > .aboutMe > p {
-            color: #131313;
-            font-family: var(--text-primary-Textfont);
-            font-weight: 500;
-            font-size: 14px;
-        }
+    .service-box p {
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--text-primary-dark-color);
+        font-family: var(--text-primary-Textfont);
+    }
 
-        .aboutContainer > .aboutMe > .certifications {
-   
-            height: 300px;
-        }
+.service-box:hover {
+    transform: translateY(-10px);
+}
 
-        .aboutContainer > .aboutMe > .certifications > ul {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            padding-top: 10px;
-        }
 
-        .aboutContainer > .aboutMe > .certifications > ul > li {
-            list-style: none;
-        }
-
-        .aboutContainer > .aboutMe > .certifications > ul > li > h2 {
-            font-family: var(--text-primary-Textfont);
-            font-weight: 500;
-            color: var(--background-dark-color);
-
-        }
-
-        .aboutContainer > .aboutMe > .certifications > ul > li > p {
-            font-size: 12px;
-            font-family: var(--text-primary-Textfont);
-            font-weight: 500;
-            color: var(--background-dark-color);
-            
-            
-        }
-
-        .aboutContainer > .aboutMe > .certifications > ul > li > p > span{
-            font-weight: bold;
-            color: var(--background-dark-color);
-            
-        }
       
     </style>
 </head>
@@ -152,18 +134,43 @@
                 <img src="about.png">
             </div>
             <div class="aboutMe">
-                <h1>About Me</h1>
+                <h1>About Me & Certifications</h1>
                 <p>
                     I recently graduated with a Bachelor of Science in Information Systems. I have hands-on experience in web development from my internship, and I also served as the full-stack developer for my capstone project.
                 </p>
                 <div class="certifications" >
                     <ul>
-                        <li><h2>Certifications</h2></li>
                         <li><p><span>AWS Cloud Quest</span> Cloud Practitioner - Amazon Web Services Training and Certification</p></li>
                         <li><p><span>Programming (JAVA) NC III</span> - Center for International Industries Competence Corp (CIICC)</p></li>
                         <li><p><span>Fullstack web development: JS, PHP and CSS Mastery</span> - Udemy</p></li>
                     </ul>
                 </div>
+            </div>
+        </div>
+        <div class="servicesContainer" id="services">
+            <h1>Services</h1>
+            <div class="service-container" >
+            <div class="service-box">
+                <div class="img-container" >
+                    <img src="development-icon.png" alt="Web development">
+                </div>
+                <h3>UI/UX to Website</h3>
+                <p>Converting web designs into dynamic websites</p>
+            </div>
+            <div class="service-box">
+                <div class="img-container" >
+                    <img src="responsive-icon.png" alt="Responsive Website">
+                </div>
+                <h3>Responsive Website</h3>
+                <p>Building websites that adapt to different devices based on requirements.</p>
+            </div>
+            <div class="service-box">
+                <div class="img-container" >
+                    <img src="security-icon.png" alt="web security">
+                </div>
+                <h3>Basic Web Security</h3>
+                <p>Implementing basic security measures to reduce vulnerabilities.</p>
+            </div>
             </div>
         </div>
     </main>
