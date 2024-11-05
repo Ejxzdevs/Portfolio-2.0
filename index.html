@@ -7,85 +7,82 @@
     <link rel="stylesheet" href="style.css">
     <title>My Portfolio</title>
     <style>
-    .servicesContainer{
-        height: 100vh;
-        width: 100vw;
-        padding: var(--container-padding);  
-        background-color: var(--background-dark-color);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        /* border: solid 2px white; */
-       
-   
-    }
+        .contactContainer{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
 
-    .servicesContainer h1 {
-        color: var(--text-primary-light-color);
-        font-family: var(--text-primary-Textfont);
-        margin-bottom: 25px ;
-    }
+        .contactContainer h1 {
+            font-family: var(--text-primary-Textfont);;
+            color: var(--text-primary-light-color);
+        }
 
-    .service-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-        /* border: solid 2px white; */
-        width: inherit;
-      
+        .contactContainer p {
+            font-family: var(--text-primary-Textfont);;
+            color: var(--text-primary-light-color);
+        }
 
-    }
+        .contactList{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 1050px;
+            height: 300px;
+         
+        }
 
+        .contactList > div {
+            height: 70px;
+            width: 200px;
+            border: rgba(24, 235, 242, .7) solid 1px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 10px;
+            background-color: #1F2937;
+            box-shadow: 0 4px 10px rgba(24, 235, 242, .7);
+            transition: transform 0.3s ease;
+        }
 
+        .contactList > div > img {
+            height: 40px;
+            
+        }
 
-    .service-box {
-        background-color: var(--background-light-color);
-        padding: 20px;
-        width: 300px;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(24, 235, 242, .7);
-        transition: transform 0.3s ease;
-        height: 300px;
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-    }
+        
+        .contactList > div > p {
+            font-size: 22px;
+            font-weight: bold;
+            font-family: var(--text-primary-Textfont);;
+            color: var(--text-primary-light-color);
+        }
 
-    .service-box img{
-        height: 120px;
-        width: 150px;
-    }
-    .service-box .img-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* border: solid 1px black; */
-        padding: 12px;
-    }
+        .contactList > div:hover {
+            transform: translateY(-10px);
+        }
 
-    .service-box h3 {
-        font-size: 18px;
-        margin-bottom: 5px;
-        color: var(--text-primary-dark-color);
-        font-family: var(--text-primary-Textfont);
-    }
+        .footerContainer {
+            height: 50px;
+            background-color: var(--bg-header);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
 
-
-    .service-box p {
-        font-size: 14px;
-        line-height: 1.5;
-        color: var(--text-primary-dark-color);
-        font-family: var(--text-primary-Textfont);
-    }
-
-.service-box:hover {
-    transform: translateY(-10px);
-}
+        .footerContainer p {
+            font-family: var(--text-primary-Textfont);;
+            color: var(--text-primary-light-color);
+        }
+  
 
 
       
@@ -173,6 +170,32 @@
             </div>
             </div>
         </div>
+        <div class="contactContainer" id="contact" >
+            <h1>Contact Us</h1>
+            <p>Feel free to reach out via any of the platforms below!</p>
+            <div class="contactList">
+                <div>
+                    <img src="Facebook.png" alt="Facebook">
+                    <p>facebook</p>
+                </div>
+                <div>
+                    <img src="Instagram.png" alt="Instagram">
+                    <p>Instagram</p>
+                </div>
+                <div>
+                    <img src="LinkedIn.png" alt="LinkedIn">
+                    <p>linkedIn</p>
+                </div>
+                <div>
+                    <img src="Gmail.png" alt="Gmail">
+                    <p>Gmail</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="footerContainer">
+            <p id="copyright"></p>
+        </div>
     </main>
 
     <script>
@@ -180,6 +203,7 @@
             let option = document.getElementById("option");
             option.classList.toggle("show");
         }
+        document.getElementById("copyright").innerHTML = `Copyright © ${new Date().getFullYear()} - All rights reserved by <strong>Ejhay Gofredo</strong>.`;
     </script>
 </body>
 </html>
