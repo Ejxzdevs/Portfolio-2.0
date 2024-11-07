@@ -387,7 +387,7 @@ nav > ul > li > a {
 
 .contactList > a {
     height: 70px;
-    width: 200px;
+    min-width: 270px;
     border: rgba(24, 235, 242, .7) solid 1px;
     border-radius: 10px;
     display: flex;
@@ -1449,6 +1449,7 @@ nav > ul > li > a {
         align-items: center;
         gap: 20px;
         padding: 30px;
+
     }
 
     .contactList > a {
