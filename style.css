@@ -654,7 +654,7 @@ nav > ul > li > a {
         width: 100%;
         display: flex;
         flex-direction: column; 
-        padding: 0;
+        gap: 20px;
        
     }
 
@@ -711,7 +711,7 @@ nav > ul > li > a {
     /* contact */
 
     .contactContainer{
-        height: 550px;
+        height: auto;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -737,6 +737,8 @@ nav > ul > li > a {
         flex-direction: column;
         gap: 20px;
         margin: 17px;
+        height: auto;
+      
      
     }
 
@@ -1078,6 +1080,7 @@ nav > ul > li > a {
             flex-direction: column;
             gap: 20px;
             margin: 17px;
+            height: auto;
          
         }
     
