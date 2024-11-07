@@ -274,15 +274,16 @@ nav > ul > li > a {
 }
 
 .servicesContainer{
-    height: 100vh;
-    width: 100vw;
+    height: auto;
     padding: var(--container-padding);  
     background-color: var(--background-dark-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
+    padding: 80px 0 20px 0;
+
 
    
 
@@ -291,18 +292,18 @@ nav > ul > li > a {
 .servicesContainer h1 {
     color: var(--text-primary-light-color);
     font-family: var(--text-primary-Textfont);
-    margin-bottom: 25px ;
 }
 
 .service-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
     /* border: solid 2px white; */
-    width: 1050px;
+    width: 100%;
+  
   
 
 }
@@ -355,12 +356,12 @@ nav > ul > li > a {
 
 .contactContainer{
     height: 100vh;
-    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding: 0 15px;
 }
 
 .contactContainer h1 {
@@ -376,11 +377,12 @@ nav > ul > li > a {
 .contactList{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    width: 1050px;
+    justify-content: center;
     height: 300px;
- 
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .contactList > a {
