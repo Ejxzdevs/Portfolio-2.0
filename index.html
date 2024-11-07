@@ -9,83 +9,371 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>My Portfolio</title>
     <style>
-        .contactContainer{
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
+      /* 601px – 768px: Small Tablets (Portrait) */
+      /* Title (h1): 26px
+        Subtitles (h2, h3): 24px, 20px
+        Paragraph Text (p): 16px */
+ @media (min-width: 601px) and (max-width: 768px) {
+    body {
+        /* background-color: yellow; */
+    }
+    header {
+        display: flex;
+        justify-content: end;
+        grid-template-columns: 1;
+        padding: 0; 
+    }
+    .tooggle-navBar {
+        width: inherit;
+        height: 190px;
+        display: flex;
+        flex-direction: column;
+    }
+    .tooggle-navBar > .toogle-container {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding-right: 12px;
+        height: 50px;
 
-        .contactContainer h1 {
-            font-family: var(--text-primary-Textfont);;
-            color: var(--text-primary-light-color);
-        }
+    }
+    .tooggle-navBar > .toogle-container > a {
+        font-size: 32px;
+        color: var(--text-primary-light-color);
+    }
 
-        .contactContainer p {
-            font-family: var(--text-primary-Textfont);;
-            color: var(--text-primary-light-color);
-        }
+    /* sub */
+    .sub-nav-container {
+        height: 0;
+        overflow: hidden; 
+        transition: height 1s ease;
+        display: flex;
+    }
+    .sub-nav-container.show {
+        height: 140px;
+    }
+    .sub-nav-container > ul {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        border-bottom: solid 1px gray;
+        padding: 20px 0;
+    }
+    .sub-nav-container > ul > li {
+        list-style: none;
+        padding-left: 10px;
+    }
+    .sub-nav-container > ul > li > a {
+        font-size: 12px;
+        text-decoration: none;
+        color: var(--text-primary-light-color);
+        font-family: "Open Sans", sans-serif;
+        letter-spacing: 1px;
+    }
 
-        .contactList{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            width: 1050px;
-            height: 300px;
-         
-        }
+    header nav {
+        display: none;
+    }
 
-        .contactList > a {
-            height: 70px;
-            width: 200px;
-            border: rgba(24, 235, 242, .7) solid 1px;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
-            gap: 10px;
-            background-color: #1F2937;
-            box-shadow: 0 4px 10px rgba(24, 235, 242, .7);
-            transition: transform 0.3s ease;
-            text-decoration: none;
-            cursor: pointer;
-        }
+    header > .logo {
+        display: none;
+    }
 
-        .contactList > a > img {
-            height: 40px;
-            
-        }
+    .heroContainer {
+        height: 100vh;
+        display: grid;
+        grid-template-areas: "hero" "describe";
+        grid-template-columns: repeat(1, 1fr);  
+        padding: 0 0 10px 0; 
+    }
+
+    .heroContainer > .hero {
+        grid-area: hero;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .heroContainer > .hero > img {
+        height: 250px;
+        margin-bottom: 30px;
+    }
+
+    .heroContainer > .describe {
+        grid-area: describe;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 12px;
+   
+        
+    
+    }
+
+    .heroContainer > .describe > label {
+        text-align: center;
+        font-size: 20px;
+        display: none;
+        font-family: var(--text-primary-Textfont);
+ 
+
+    }
+
+    .heroContainer > .describe > h1 {
+        font-size: 26px;
+        font-family: var(--text-primary-Textfont);
+        text-align: center;
 
         
-        .contactList > a > p {
-            font-size: 22px;
-            font-weight: bold;
-            font-family: var(--text-primary-Textfont);;
-            color: var(--text-primary-light-color);
-        }
+        
+    }
 
-        .contactList > a:hover {
-            transform: translateY(-10px);
-        }
+    .heroContainer > .describe > h1 > span {
+    animation: var(--neon-animation);
+    }
 
-        .footerContainer {
-            height: 50px;
-            background-color: var(--bg-header);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-           
-        }
+    .heroContainer > .describe > p {
+        font-family: var(--text-primary-Textfont);
+        font-size: 16px;
+        text-align: center;
+    }
 
-        .footerContainer p {
-            font-family: var(--text-primary-Textfont);;
-            color: var(--text-primary-light-color);
-        }
+    /* about */
+
+    .aboutContainer{
+        height: 100vh;
+        display: grid;
+        grid-template-areas: "aboutImage" "aboutMe";
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0;
+        padding: 80px 0 20px 0;
+       
+  
+    }
+
+    .aboutContainer > .aboutImage {
+        grid-area: aboutImage;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+      
+       
+      
+    }
+
+
+    .aboutContainer > .aboutImage > img {
+        height: 160px;
+    
+    }   
+
+    .aboutContainer > .aboutMe {
+        width: 100%;
+        grid-area: aboutMe;
+        display: flex;
+        justify-content: start;
+        align-items: center; 
+        padding: 0 20px;
+        gap: 5px;
+        margin: 0;
+
+    
+
+    }
+
+    
+    .aboutContainer > .aboutMe > h1 {
+        margin: 10px 0;
+        font-size: 26px;
+        text-align: center;
+        font-family: var(--text-primary-Textfont);
+        
+    }
+
+    .aboutContainer > .aboutMe > p  {
+        font-size: 16px;
+        word-wrap: break-word; 
+        font-family: var(--text-primary-Textfont);
+        hyphens: auto;
+        
+    }
+
+    .aboutContainer > .aboutMe > .certifications {
+        height: auto;
+    }
+    .aboutContainer > .aboutMe > .certifications > ul {
+        padding: 10px 0;
+      
+    }
+
+    .aboutContainer > .aboutMe > .certifications > ul > li > h2 {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 8px;
+        font-weight: bolder;
+        font-family: var(--text-primary-Textfont);
+        
+        
+    }
+    .aboutContainer > .aboutMe > .certifications > ul > li > p {
+        font-size: 16px;
+        font-family: var(--text-primary-Textfont);
+        
+    }
+
+    /* services sections */
+    .servicesContainer{
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 8rem 1rem;
+    }
+
+    
+    
+    .servicesContainer h1{
+        font-size: 26px;
+        margin-top: 1rem;
+        font-family: var(--text-primary-Textfont);
+   
+
+        
+
+    }
+
+    .service-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+     
+
+    }
+ 
+    
+    .service-box {
+        height: 260px;
+        width : 250px;
+    
+      
+        
+    }
+
+    .service-box img{
+        height: 50px;
+        width: 50px;
+      
+    }
+    .service-box .img-container{
+     
+    }
+
+    .service-box h3 {
+        font-size: 20px;
+        font-family: var(--text-primary-Textfont);
+       
+    }
+
+
+    .service-box p {
+        font-size: 16px;
+        font-family: var(--text-primary-Textfont);
+    
+    }
+
+    .service-box:hover {
+        transform: translateY(-5px);
+    }
+
+    /* contact */
+
+    .contactContainer{
+        height: auto;
+    
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 20px;
+   
+    }
+
+    .contactContainer h1 {
+        font-size: 26px;
+        margin: 30px 0 0 0;
+        font-family: var(--text-primary-Textfont);
+    }
+
+    .contactContainer p {
+        font-size: 16px;
+        font-family: var(--text-primary-Textfont);
+
+       
+    }
+
+    .contactList{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 30px;
+    }
+
+    .contactList > a {
+        width: 140px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .contactList > a > img {
+        height: 30px;
+        
+    }
+
+    
+    .contactList > a > p {
+        font-size: 16px;
+        font-weight: normal;
+        width : 80px;
+        font-family: var(--text-primary-Textfont);
+    }
+
+    .contactList > a:hover {
+        transform: translateY(-5px);
+    }
+
+    .footerContainer {
+        width: 100%;
+        padding: 0 12px;
+       
+       
+    }
+
+    .footerContainer p {
+        font-size: 16px;
+        text-align: center;
+        font-family: var(--text-primary-Textfont);
+    }
+ 
+ 
+
+}
   
 
 
@@ -121,18 +409,18 @@
     </header>
     <main>
         <div class="heroContainer" id="hero">
-            <div data-aos="fade-right" data-aos-duration="1000" class="describe" >
+            <div  class="describe" >
                 <label >Web Developer</label>
                 <h1><span>Hello I am</span> Ejhay Gofredo</h1>
                 <p>I am a web developer focused on creating dynamic, efficient, and scalable solutions for every project I work on.</p>
             </div>
             <div class="hero">
-                <img data-aos="fade-up" data-aos-duration="1000" src="hero.png">
+                <img src="hero.png">
             </div>
         </div>
         <div class="aboutContainer" id="about">
-            <div class="aboutImage" >
-                <img src="about.png" >
+            <div class="aboutImage"  >
+                <img  src="about.png" >
             </div>
             <div class="aboutMe">
                 <h1 >About Me & Certifications</h1>
@@ -203,7 +491,10 @@
     </main>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            offset: 100, // The offset to trigger animation when scrolling
+            duration: 1000, // Duration of the animation
+        });
 
         function myFunction() {
             let option = document.getElementById("option");
