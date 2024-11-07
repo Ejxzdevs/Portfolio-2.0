@@ -1784,7 +1784,6 @@ nav > ul > li > a {
         
             .contactContainer{
                 height: auto;
-            
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
@@ -1814,6 +1813,7 @@ nav > ul > li > a {
                 align-items: center;
                 gap: 20px;
                 padding: 30px;
+                height:auto;
             }
         
             .contactList > a {
